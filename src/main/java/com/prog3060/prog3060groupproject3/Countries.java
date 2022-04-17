@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class CountriesEntity {
+public class Countries {
 
     @Id
     @GeneratedValue
@@ -14,11 +14,11 @@ public class CountriesEntity {
     private String name;
     private Long regionId;
 
-    public CountriesEntity() {
+    public Countries() {
 
     }
 
-    public CountriesEntity(String name, Long regionId) {
+    public Countries(String name, Long regionId) {
         this.name = name;
         this.regionId = regionId;
     }
@@ -49,7 +49,7 @@ public class CountriesEntity {
 
     @Override
     public String toString() {
-        return "CountriesEntity{" +
+        return "Countries{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", regionId=" + regionId +

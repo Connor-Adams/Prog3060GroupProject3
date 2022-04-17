@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class LocationsEntity {
+public class Locations {
     @Id
     @GeneratedValue
     private Long id;
@@ -15,11 +15,11 @@ public class LocationsEntity {
     private String province;
     private String countryId;
 
-    public LocationsEntity() {
+    public Locations() {
 
     }
 
-    public LocationsEntity(String address, String postalCode, String city, String province, String countryId) {
+    public Locations(String address, String postalCode, String city, String province, String countryId) {
         this.address = address;
         this.postalCode = postalCode;
         this.city = city;
@@ -77,7 +77,7 @@ public class LocationsEntity {
 
     @Override
     public String toString() {
-        return "LocationsEntity{" +
+        return "Locations{" +
                 "id=" + id +
                 ", address='" + address + '\'' +
                 ", postalCode='" + postalCode + '\'' +

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DepartmentRepository extends CrudRepository<DepartmentsEntity,Long> {
+public interface DepartmentRepository extends CrudRepository<Departments,Long> {
 
-    List<DepartmentsEntity> findByLocationId(Long locationId);
+    List<Departments> findByLocationId(Long locationId);
 }

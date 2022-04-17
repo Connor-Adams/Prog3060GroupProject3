@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class JobsEntity {
+public class Jobs {
     @Id
     @GeneratedValue
     private Long id;
@@ -13,11 +13,11 @@ public class JobsEntity {
     private double minSalary;
     private double maxSalary;
 
-    public JobsEntity() {
+    public Jobs() {
 
     }
 
-    public JobsEntity(String jobtitle, double minSalary, double maxSalary) {
+    public Jobs(String jobtitle, double minSalary, double maxSalary) {
         this.jobtitle = jobtitle;
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
@@ -57,7 +57,7 @@ public class JobsEntity {
 
     @Override
     public String toString() {
-        return "JobsEntity{" +
+        return "Jobs{" +
                 "id=" + id +
                 ", jobtitle='" + jobtitle + '\'' +
                 ", minSalary=" + minSalary +

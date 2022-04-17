@@ -20,23 +20,29 @@ public class HRManagerService {
         System.out.println("i work");
 
         //All employees with salary in range of 9000,17000
-        Iterable<EmployeesEntity> allEmployees = employeeRepository.findAll();
-        for (EmployeesEntity currentEmp : allEmployees) {
+        System.out.println("All employees with salary in range of 9000-17000");
+        Iterable<Employees> allEmployees = employeeRepository.findAll();
+        for (Employees currentEmp : allEmployees) {
+            System.out.println(currentEmp);
             if(17000 >= currentEmp.getSalary() && currentEmp.getSalary() <= 9000){
                 System.out.println(currentEmp);
             }
         }
 
         //All employees whose first name ends in 'a'.
-        List<EmployeesEntity> aEmployees = employeeRepository.findByFirstNameEndingWith("a");
+        System.out.println("All employees whose first name ends in 'a'");
+        List<Employees> aEmployees = employeeRepository.findByFirstNameEndingWith("a");
         aEmployees.forEach(emp -> System.out.println(emp));
         //All employees working in accounting
+        System.out.println("All employees working in accounting");
         //All employees withing under manager 108
-        List<EmployeesEntity> employeesManagedBy108 = employeeRepository.findByManagerId(108L);
+        System.out.println("All employees working under manager 108");
+        List<Employees> employeesManagedBy108 = employeeRepository.findByManagerId(108L);
         employeesManagedBy108.forEach(employeesEntity -> System.out.println(employeesEntity));
 
         //All departments with Location ID 1700
-        List<DepartmentsEntity> departmentLocation1700 =  departmentRepository.findByLocationId(1700L);
+        System.out.println("All departments with Location ID 1700");
+        List<Departments> departmentLocation1700 =  departmentRepository.findByLocationId(1700L);
         departmentLocation1700.forEach(departmentsEntity -> System.out.println(departmentsEntity));
 
         //Count of cities each country has - return country id and number of cities

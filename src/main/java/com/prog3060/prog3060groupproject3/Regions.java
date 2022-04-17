@@ -5,21 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class DepartmentsEntity {
-
+public class Regions {
     @Id
     @GeneratedValue
     private Long id;
     private String name;
-    private Long locationId;
 
-    public DepartmentsEntity() {
-
+    public Regions() {
     }
 
-    public DepartmentsEntity(String name, Long locationId) {
+    public Regions(String name) {
         this.name = name;
-        this.locationId = locationId;
     }
 
     public String getName() {
@@ -28,14 +24,6 @@ public class DepartmentsEntity {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Long getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(Long locationId) {
-        this.locationId = locationId;
     }
 
     public void setId(Long id) {
@@ -48,10 +36,9 @@ public class DepartmentsEntity {
 
     @Override
     public String toString() {
-        return "DepartmentsEntity{" +
+        return "Regions{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", locationId=" + locationId +
                 '}';
     }
 }

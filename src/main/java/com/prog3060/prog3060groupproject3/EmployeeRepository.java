@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EmployeeRepository extends CrudRepository<EmployeesEntity, Long> {
+public interface EmployeeRepository extends CrudRepository<Employees, Long> {
 
-    List<EmployeesEntity> findByManagerId(Long id);
-    List<EmployeesEntity> findByFirstNameEndingWith(String letter);
+    List<Employees> findByManagerId(Long id);
+    List<Employees> findByFirstNameEndingWith(String letter);
 }

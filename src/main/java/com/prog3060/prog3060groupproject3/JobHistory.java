@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
-public class JobHistoryEntity {
+public class JobHistory {
     @Id
     @GeneratedValue
     private Long id;
@@ -15,11 +15,11 @@ public class JobHistoryEntity {
     private Long jobId;
     private Long departmentId;
 
-    public JobHistoryEntity() {
+    public JobHistory() {
 
     }
 
-    public JobHistoryEntity(Date startDate, Date endDate, Long jobId, Long departmentId) {
+    public JobHistory(Date startDate, Date endDate, Long jobId, Long departmentId) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.jobId = jobId;
@@ -68,7 +68,7 @@ public class JobHistoryEntity {
 
     @Override
     public String toString() {
-        return "JobHistoryEntity{" +
+        return "JobHistory{" +
                 "id=" + id +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +

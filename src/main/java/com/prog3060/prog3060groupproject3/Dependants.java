@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class DependantsEntity {
+public class Dependants {
     @Id
     @GeneratedValue
     private Long id;
@@ -14,11 +14,11 @@ public class DependantsEntity {
     private String relationship;
     private Long employeeId;
 
-    public DependantsEntity() {
+    public Dependants() {
 
     }
 
-    public DependantsEntity(String firstName, String lastName, String relationship, Long employeeId) {
+    public Dependants(String firstName, String lastName, String relationship, Long employeeId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.relationship = relationship;
@@ -67,7 +67,7 @@ public class DependantsEntity {
 
     @Override
     public String toString() {
-        return "DependantsEntity{" +
+        return "Dependants{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
