@@ -1,5 +1,6 @@
 package com.prog3060.prog3060groupproject3.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,8 +9,9 @@ import javax.persistence.Id;
 public class Jobs {
     @Id
     @GeneratedValue
+    @Column(name = "job_id", nullable = false)
     private Long id;
-    private String jobtitle;
+    private String jobTitle;
     private double minSalary;
     private double maxSalary;
 
@@ -18,17 +20,17 @@ public class Jobs {
     }
 
     public Jobs(String jobtitle, double minSalary, double maxSalary) {
-        this.jobtitle = jobtitle;
+        this.jobTitle = jobtitle;
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
     }
 
     public String getJobtitle() {
-        return jobtitle;
+        return jobTitle;
     }
 
     public void setJobtitle(String jobtitle) {
-        this.jobtitle = jobtitle;
+        this.jobTitle = jobtitle;
     }
 
     public double getMinSalary() {
@@ -59,7 +61,7 @@ public class Jobs {
     public String toString() {
         return "Jobs{" +
                 "id=" + id +
-                ", jobtitle='" + jobtitle + '\'' +
+                ", jobtitle='" + jobTitle + '\'' +
                 ", minSalary=" + minSalary +
                 ", maxSalary=" + maxSalary +
                 '}';

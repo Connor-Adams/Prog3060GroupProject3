@@ -10,4 +10,5 @@ import java.util.List;
 public interface DepartmentRepository extends CrudRepository<Departments,Long> {
 
     List<Departments> findByLocationId(Long locationId);
+    List<Departments> findAllById(Long departmentId);
 }

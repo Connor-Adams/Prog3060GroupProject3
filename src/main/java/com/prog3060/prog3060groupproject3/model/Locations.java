@@ -1,5 +1,6 @@
 package com.prog3060.prog3060groupproject3.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,11 +9,12 @@ import javax.persistence.Id;
 public class Locations {
     @Id
     @GeneratedValue
+    @Column(name = "location_id", nullable = false)
     private Long id;
     private String address;
     private String postalCode;
     private String city;
-    private String province;
+    private String stateProvince;
     private String countryId;
 
     public Locations() {
@@ -23,7 +25,7 @@ public class Locations {
         this.address = address;
         this.postalCode = postalCode;
         this.city = city;
-        this.province = province;
+        this.stateProvince = province;
         this.countryId = countryId;
     }
 
@@ -52,11 +54,11 @@ public class Locations {
     }
 
     public String getProvince() {
-        return province;
+        return stateProvince;
     }
 
     public void setProvince(String province) {
-        this.province = province;
+        this.stateProvince = province;
     }
 
     public String getCountryId() {
@@ -82,7 +84,7 @@ public class Locations {
                 ", address='" + address + '\'' +
                 ", postalCode='" + postalCode + '\'' +
                 ", city='" + city + '\'' +
-                ", province='" + province + '\'' +
+                ", province='" + stateProvince + '\'' +
                 ", countryId='" + countryId + '\'' +
                 '}';
     }
