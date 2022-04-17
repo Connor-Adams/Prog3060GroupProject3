@@ -11,4 +11,9 @@ import java.util.Optional;
 @Repository
 public interface LocationsRepository extends CrudRepository<Locations, Long> {
 
+    //@Query(value = "SELECT country_id, COUNT(city) FROM Locations group by country_id", nativeQuery = true)
+    //List<Locations> countByCountryId();
+    List<Locations> findAllById(Long locationId);
+
+
 }

@@ -65,6 +65,8 @@ public class HRManagerService {
         //Count of cities each country has - return country id and number of cities
         System.out.println("Count of cities each country has - return country id and number of cities");
 
+
+
         //Department name, city and province/state for each department
         System.out.println("Department name, city and province/state for each department");
         Iterable<Departments> allDepartments = departmentRepository.findAll();
