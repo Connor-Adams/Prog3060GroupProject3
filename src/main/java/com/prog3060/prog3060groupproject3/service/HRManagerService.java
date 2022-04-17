@@ -2,8 +2,10 @@ package com.prog3060.prog3060groupproject3.service;
 
 import com.prog3060.prog3060groupproject3.model.Departments;
 import com.prog3060.prog3060groupproject3.model.Employees;
+import com.prog3060.prog3060groupproject3.model.Locations;
 import com.prog3060.prog3060groupproject3.repos.DepartmentRepository;
 import com.prog3060.prog3060groupproject3.repos.EmployeeRepository;
+import com.prog3060.prog3060groupproject3.repos.LocationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,8 @@ public class HRManagerService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
+    @Autowired
+    private LocationsRepository locationRepository;
 
     public void test() {
         System.out.println("i work");
@@ -53,10 +57,18 @@ public class HRManagerService {
         departmentLocation1700.forEach(departmentsEntity -> System.out.println(departmentsEntity));
 
         //Count of cities each country has - return country id and number of cities
+        System.out.println("Count of cities each country has - return country id and number of cities");
+        List<Locations> cityLocations = locationRepository.countByCityGroupByCountryId();
+        System.out.println(cityLocations);
+
 
         //Department name, city and province/state for each department
+        System.out.println("Department name, city and province/state for each department");
+        Iterable<Departments> allDepartments = departmentRepository.findAll();
 
         //display last name, job, dept number and dept name for all employees who work in Toronto
+
+
 
         //Display average sum of salaries and group results with department id
 
