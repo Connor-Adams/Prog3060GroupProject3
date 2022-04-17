@@ -1,25 +1,26 @@
-package com.prog3060.prog3060groupproject3;
+package com.prog3060.prog3060groupproject3.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Departments {
+public class Countries {
 
     @Id
     @GeneratedValue
     private Long id;
     private String name;
-    private Long locationId;
+    private Long regionId;
 
-    public Departments() {
+    public Countries() {
 
     }
 
-    public Departments(String name, Long locationId) {
+    public Countries(String name, Long regionId) {
         this.name = name;
-        this.locationId = locationId;
+        this.regionId = regionId;
     }
 
     public String getName() {
@@ -30,12 +31,12 @@ public class Departments {
         this.name = name;
     }
 
-    public Long getLocationId() {
-        return locationId;
+    public Long getRegionId() {
+        return regionId;
     }
 
-    public void setLocationId(Long locationId) {
-        this.locationId = locationId;
+    public void setRegionId(Long regionId) {
+        this.regionId = regionId;
     }
 
     public void setId(Long id) {
@@ -48,10 +49,10 @@ public class Departments {
 
     @Override
     public String toString() {
-        return "Departments{" +
+        return "Countries{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", locationId=" + locationId +
+                ", regionId=" + regionId +
                 '}';
     }
 }

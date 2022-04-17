@@ -1,4 +1,4 @@
-package com.prog3060.prog3060groupproject3;
+package com.prog3060.prog3060groupproject3.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ import java.util.Date;
 public class Employees {
     @Id
     @GeneratedValue
-    @Column(name = "id", nullable = false)
+    @Column(name = "employee_id", nullable = false)
     private Long employeeId;
     private String firstName;
     private String lastName;

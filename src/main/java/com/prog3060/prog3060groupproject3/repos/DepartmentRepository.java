@@ -1,5 +1,6 @@
-package com.prog3060.prog3060groupproject3;
+package com.prog3060.prog3060groupproject3.repos;
 
+import com.prog3060.prog3060groupproject3.model.Departments;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

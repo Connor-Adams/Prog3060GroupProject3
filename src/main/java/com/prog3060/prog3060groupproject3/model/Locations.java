@@ -1,4 +1,4 @@
-package com.prog3060.prog3060groupproject3;
+package com.prog3060.prog3060groupproject3.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
