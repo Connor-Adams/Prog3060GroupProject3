@@ -39,6 +39,8 @@ public class HRManagerService {
 
         //All employees working in accounting
         System.out.println("All employees working in accounting");
+        List<Employees> accountingEmployees = employeeRepository.findDistinctByDepartmentId(11L);
+        accountingEmployees.forEach(actEmp -> System.out.println(actEmp));
 
         //All employees withing under manager 108
         System.out.println("All employees working under manager 108");

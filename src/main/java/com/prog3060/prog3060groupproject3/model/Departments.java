@@ -1,5 +1,6 @@
 package com.prog3060.prog3060groupproject3.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,7 +10,9 @@ public class Departments {
 
     @Id
     @GeneratedValue
+    @Column(name = "department_id", nullable = false)
     private Long id;
+    @Column(name = "department_name", nullable = false)
     private String name;
     private Long locationId;
 
