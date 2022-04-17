@@ -9,5 +9,4 @@ import java.util.List;
 @Repository
 public interface LocationsRepository extends CrudRepository<Locations, Long> {
 
-    List<Locations> countByCityGroupByCountryId();
 }

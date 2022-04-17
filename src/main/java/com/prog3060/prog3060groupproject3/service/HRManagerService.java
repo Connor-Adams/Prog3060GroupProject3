@@ -58,8 +58,8 @@ public class HRManagerService {
 
         //Count of cities each country has - return country id and number of cities
         System.out.println("Count of cities each country has - return country id and number of cities");
-        List<Locations> cityLocations = locationRepository.countByCityGroupByCountryId();
-        System.out.println(cityLocations);
+        Iterable<Locations> cityLocations = locationRepository.findAll();
+        cityLocations.forEach(test -> System.out.println(test));
 
 
         //Department name, city and province/state for each department

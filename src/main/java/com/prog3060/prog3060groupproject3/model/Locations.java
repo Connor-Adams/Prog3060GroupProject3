@@ -1,5 +1,6 @@
 package com.prog3060.prog3060groupproject3.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,6 +9,7 @@ import javax.persistence.Id;
 public class Locations {
     @Id
     @GeneratedValue
+    @Column(name = "location_id", nullable = false)
     private Long id;
     private String address;
     private String postalCode;
