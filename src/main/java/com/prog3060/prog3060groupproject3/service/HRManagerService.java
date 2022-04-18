@@ -11,6 +11,8 @@ import com.prog3060.prog3060groupproject3.repos.LocationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -90,13 +92,28 @@ public class HRManagerService {
 
         }
 
-
         //Display average sum of salaries and group results with department id
+        System.out.println("Display average sum of salaries and group results with department id");
+        Iterable<Departments> departments = departmentRepository.findAll();
+        departments.forEach(department -> {
+            Iterable<Employees> employees = employeeRepository.findDistinctByDepartmentId(department.getId());
+            double sum = 0;
+            double count = 0;
+            for (Employees employee : employees) {
+                sum += employee.getSalary();
+                count ++;
+            }
+
+            double average = sum/count;
+            System.out.println("Department " + department.getId() + " Average Salary is $" + new DecimalFormat("#.##").format(average));
+        });
+
 
         //select the manager name, department id of manager, and the count of employees working under the manager as total_employees
 
 
 
     }
+
 
 }
