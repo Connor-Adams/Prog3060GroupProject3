@@ -13,4 +13,5 @@ public interface EmployeeRepository extends CrudRepository<Employees, Long> {
     List<Employees> findByFirstNameEndingWith(String letter);
     List<Employees> findDistinctByFirstNameEndingWith(String letter);
     List<Employees> findDistinctByDepartmentId(Long id);
+    List<Employees> findDistinctByJobId(Long id);
 }

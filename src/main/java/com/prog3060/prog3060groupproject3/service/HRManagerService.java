@@ -110,6 +110,20 @@ public class HRManagerService {
 
 
         //select the manager name, department id of manager, and the count of employees working under the manager as total_employees
+        System.out.println("Question 10");
+        Iterable<Jobs> managerJobs = jobsRepository.findDistinctByJobTitleContaining("Manager");
+        managerJobs.forEach(job -> {
+            Iterable<Employees> managers = employeeRepository.findDistinctByJobId(job.getId());
+
+            managers.forEach(manager -> {
+                int count = 0;
+                Iterable<Employees>  employees = employeeRepository.findByManagerId(manager.getManagerId());
+                for (Employees employee : employees) {
+                    count += 1;
+                }
+                System.out.println(manager.getFirstName() + " " + manager.getLastName() + " of department " + manager.getDepartmentId() + " manages " + count + " people");
+            });
+        });
 
 
 

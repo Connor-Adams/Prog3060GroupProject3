@@ -10,5 +10,8 @@ import java.util.List;
 public interface JobsRepository extends CrudRepository<Jobs, Long> {
 
     List<Jobs> findAllById(Long jobId);
+    List<Jobs> findDistinctByJobTitleContaining(String job_title);
+
+
 
 }
