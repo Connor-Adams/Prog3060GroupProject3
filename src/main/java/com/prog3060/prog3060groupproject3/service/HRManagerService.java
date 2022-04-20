@@ -1,9 +1,6 @@
 package com.prog3060.prog3060groupproject3.service;
 
-import com.prog3060.prog3060groupproject3.model.Departments;
-import com.prog3060.prog3060groupproject3.model.Employees;
-import com.prog3060.prog3060groupproject3.model.Jobs;
-import com.prog3060.prog3060groupproject3.model.Locations;
+import com.prog3060.prog3060groupproject3.model.*;
 import com.prog3060.prog3060groupproject3.repos.DepartmentRepository;
 import com.prog3060.prog3060groupproject3.repos.EmployeeRepository;
 import com.prog3060.prog3060groupproject3.repos.JobsRepository;
@@ -66,6 +63,10 @@ public class HRManagerService {
 
         //Count of cities each country has - return country id and number of cities
         System.out.println("Count of cities each country has - return country id and number of cities");
+        List<String> countriesIterable = locationRepository.countByCountryId();
+        countriesIterable.forEach(cityCount -> System.out.println(cityCount));
+
+
 
 
 
